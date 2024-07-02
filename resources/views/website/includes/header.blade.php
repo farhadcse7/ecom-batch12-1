@@ -1,3 +1,12 @@
+<div class="preloader">
+    <div class="preloader-inner">
+        <div class="preloader-icon">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</div>
+
 <header class="header navbar-area">
 
     <div class="topbar">
@@ -69,7 +78,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-3 col-md-3 col-7">
 
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="{{route('home')}}">
                         <img src="{{asset('/')}}website/assets/images/logo/logo.svg" alt="Logo">
                     </a>
 
@@ -193,7 +202,7 @@
                                     <li><a href="product-grids.html">Cables & Adapters</a></li>
                                 </ul>
                             </li>
-                            <li><a href="product-grids.html">accessories</a></li>
+                            <li><a href="{{route('product-category')}}">accessories</a></li>
                             <li><a href="product-grids.html">Televisions</a></li>
                             <li><a href="product-grids.html">best selling</a></li>
                             <li><a href="product-grids.html">top 100 offer</a></li>

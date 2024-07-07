@@ -5,12 +5,12 @@
     <!-- PAGE-HEADER -->
     <div class="page-header">
         <div>
-            <h1 class="page-title">Category Module</h1>
+            <h1 class="page-title">Brand Module</h1>
         </div>
         <div class="ms-auto pageheader-btn">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="javascript:void(0);">Category</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Manage Category</li>
+                <li class="breadcrumb-item"><a href="javascript:void(0);">Brand</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Manage Brand</li>
             </ol>
         </div>
     </div>
@@ -21,7 +21,7 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-header border-bottom">
-                    <h3 class="card-title">All Category Info</h3>
+                    <h3 class="card-title">All Brand Info</h3>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -37,21 +37,23 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>Bella</td>
-                                <td>Chloe</td>
-                                <td>System Developer</td>
-                                <td>2018/03/12</td>
-                                <td>$654,765</td>
-                                <td>
-                                    <a href="" class="btn btn-success btn-sm">
-                                        <i class="fa fa-edit"></i>
-                                    </a>
-                                    <a href="" class="btn btn-danger btn-sm">
-                                        <i class="fa fa-trash"></i>
-                                    </a>
-                                </td>
-                            </tr>
+                            @foreach($brands as $brand)
+                                <tr>
+                                    <td>{{$loop->iteration}}</td>
+                                    <td>{{$brand->name}}</td>
+                                    <td>{{$brand->description}}</td>
+                                    <td><img src="{{asset($brand->image)}}" alt="" height="50"> </td>
+                                    <td>{{$brand->status == 1 ? 'Published':'Unpublished'}}</td>
+                                    <td>
+                                        <a href="{{route('brand.edit',['id'=>$brand->id])}}" class="btn btn-success btn-sm">
+                                            <i class="fa fa-edit"></i>
+                                        </a>
+                                        <a href="{{route('brand.destroy',['id'=>$brand->id])}}" class="btn btn-danger btn-sm">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            @endforeach
                             </tbody>
                         </table>
                     </div>

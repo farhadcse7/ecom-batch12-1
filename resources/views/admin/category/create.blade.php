@@ -21,8 +21,9 @@
                 <h3 class="card-title">Create Category Form</h3>
             </div>
             <div class="card-body">
-                <p class="text-muted"></p>
-                <form class="form-horizontal">
+                <p class="text-muted">{{session('message')}}</p>
+                <form class="form-horizontal" action="{{route('category.store')}}" method="POST" enctype="multipart/form-data">
+                    @csrf
                     <div class="row mb-4">
                         <label for="categoryName" class="col-md-3 form-label">Category Name</label>
                         <div class="col-md-9">

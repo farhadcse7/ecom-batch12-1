@@ -5,7 +5,7 @@
     <!-- PAGE-HEADER -->
     <div class="page-header">
         <div>
-            <h1 class="page-title">Sub Category Module</h1>
+            <h1 class="page-title"> Sub Category Module</h1>
         </div>
         <div class="ms-auto pageheader-btn">
             <ol class="breadcrumb">
@@ -29,7 +29,8 @@
                             <thead>
                             <tr>
                                 <th class="wd-15p border-bottom-0">SL NO</th>
-                                <th class="wd-15p border-bottom-0">Name</th>
+                                <th class="wd-15p border-bottom-0">Category Name</th>
+                                <th class="wd-15p border-bottom-0">Sub Category Name</th>
                                 <th class="wd-20p border-bottom-0">Description</th>
                                 <th class="wd-15p border-bottom-0">Image</th>
                                 <th class="wd-10p border-bottom-0">Status</th>
@@ -37,21 +38,24 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>Bella</td>
-                                <td>Chloe</td>
-                                <td>System Developer</td>
-                                <td>2018/03/12</td>
-                                <td>$654,765</td>
-                                <td>
-                                    <a href="" class="btn btn-success btn-sm">
-                                        <i class="fa fa-edit"></i>
-                                    </a>
-                                    <a href="" class="btn btn-danger btn-sm">
-                                        <i class="fa fa-trash"></i>
-                                    </a>
-                                </td>
-                            </tr>
+                            @foreach($sub_categories as $sub_category)
+                                <tr>
+                                    <td>{{$loop->iteration}}</td>
+                                    <td>{{$sub_category->category->name}}</td>
+                                    <td>{{$sub_category->name}}</td>
+                                    <td>{{$sub_category->description}}</td>
+                                    <td><img src="{{asset($sub_category->image)}}" alt="" height="50"> </td>
+                                    <td>{{$sub_category->status == 1 ? 'Published':'Unpublished'}}</td>
+                                    <td>
+                                        <a href="{{route('category.edit',['id'=>$sub_category->id])}}" class="btn btn-success btn-sm">
+                                            <i class="fa fa-edit"></i>
+                                        </a>
+                                        <a href="{{route('category.destroy',['id'=>$sub_category->id])}}" class="btn btn-danger btn-sm">
+                                            <i class="fa fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            @endforeach
                             </tbody>
                         </table>
                     </div>

@@ -6,6 +6,7 @@ use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\UnitController;
 use App\Http\Controllers\SubCategoryController;
 use Illuminate\Support\Facades\Route;
 
@@ -35,8 +36,16 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
 
     Route::get('/sub-category/create', [SubCategoryController::class, 'create'])->name('sub-category.create');
     Route::get('/sub-category', [SubCategoryController::class, 'index'])->name('sub-category.index');
+    Route::post('/sub-category/store', [SubCategoryController::class, 'store'])->name('sub-category.store');
 
-    Route::get('/brand/create', [BrandController::class, 'create'])->name('brand.create');
-    Route::get('/brand', [BrandController::class, 'index'])->name('brand.index');
+//    Route::get('/brand/create', [BrandController::class, 'create'])->name('brand.create');
+//    Route::get('/brand', [BrandController::class, 'index'])->name('brand.index');
+
+    Route::get('/unit/index', [UnitController::class, 'index'])->name('unit.index');
+    Route::get('/unit/create', [UnitController::class, 'create'])->name('unit.create');
+    Route::post('/store', [UnitController::class, 'store'])->name('unit.store');
+    Route::get('/unit/edit/{id}', [UnitController::class, 'edit'])->name('unit.edit');
+    Route::post('/unit/update/{id}', [UnitController::class, 'update'])->name('unit.update');
+    Route::get('/unit/destroy/{id}', [UnitController::class, 'destroy'])->name('unit.destroy');
 
 });

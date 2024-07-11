@@ -27,6 +27,7 @@ class SubCategory extends Model
         self::$subCategory->status = $request->status;
         self::$subCategory->save();
 
+
     }
 
     public static function updateSubCategory($request, $id)

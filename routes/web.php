@@ -7,6 +7,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\UnitController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SubCategoryController;
 use Illuminate\Support\Facades\Route;
 
@@ -46,9 +47,17 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
 
     Route::get('/unit/index', [UnitController::class, 'index'])->name('unit.index');
     Route::get('/unit/create', [UnitController::class, 'create'])->name('unit.create');
-    Route::post('/store', [UnitController::class, 'store'])->name('unit.store');
+    Route::post('/unit/store', [UnitController::class, 'store'])->name('unit.store');
     Route::get('/unit/edit/{id}', [UnitController::class, 'edit'])->name('unit.edit');
     Route::post('/unit/update/{id}', [UnitController::class, 'update'])->name('unit.update');
     Route::get('/unit/destroy/{id}', [UnitController::class, 'destroy'])->name('unit.destroy');
+
+    Route::get('/product/index', [ProductController::class, 'index'])->name('product.index');
+    Route::get('/product/create', [ProductController::class, 'create'])->name('product.create');
+    Route::post('/product/store', [ProductController::class, 'store'])->name('product.store');
+    Route::get('/product/edit/{id}', [ProductController::class, 'edit'])->name('product.edit');
+    Route::post('/product/update/{id}', [ProductController::class, 'update'])->name('product.update');
+    Route::get('/product/destroy/{id}', [ProductController::class, 'destroy'])->name('product.destroy');
+
 
 });

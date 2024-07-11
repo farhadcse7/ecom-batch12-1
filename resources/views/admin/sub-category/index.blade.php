@@ -47,10 +47,10 @@
                                     <td><img src="{{asset($sub_category->image)}}" alt="" height="50"> </td>
                                     <td>{{$sub_category->status == 1 ? 'Published':'Unpublished'}}</td>
                                     <td>
-                                        <a href="{{route('category.edit',['id'=>$sub_category->id])}}" class="btn btn-success btn-sm">
+                                        <a href="{{route('sub-category.edit',['id'=>$sub_category->id])}}" class="btn btn-success btn-sm">
                                             <i class="fa fa-edit"></i>
                                         </a>
-                                        <a href="{{route('category.destroy',['id'=>$sub_category->id])}}" class="btn btn-danger btn-sm">
+                                        <a href="{{route('sub-category.destroy',['id'=>$sub_category->id])}}" class="btn btn-danger btn-sm">
                                             <i class="fa fa-trash"></i>
                                         </a>
                                     </td>

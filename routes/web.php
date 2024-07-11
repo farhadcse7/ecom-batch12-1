@@ -17,6 +17,7 @@ Route::get('/show-cart', [CartController::class, 'index'])->name('show-cart');
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout');
 
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',])->group(function () {
+
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::get('/category/create', [CategoryController::class, 'create'])->name('category.create');
@@ -25,6 +26,7 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::get('/category/edit/{id}', [CategoryController::class, 'edit'])->name('category.edit');
     Route::post('/category/update/{id}', [CategoryController::class, 'update'])->name('category.update');
     Route::get('/category/destroy/{id}', [CategoryController::class, 'destroy'])->name('category.destroy');
+
 
     Route::get('/brand/create', [BrandController::class, 'create'])->name('brand.create');
     Route::post('/brand/store', [BrandController::class, 'store'])->name('brand.store');
@@ -37,9 +39,10 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified',
     Route::get('/sub-category/create', [SubCategoryController::class, 'create'])->name('sub-category.create');
     Route::get('/sub-category', [SubCategoryController::class, 'index'])->name('sub-category.index');
     Route::post('/sub-category/store', [SubCategoryController::class, 'store'])->name('sub-category.store');
+    Route::get('/sub-category/edit/{id}', [SubCategoryController::class, 'edit'])->name('sub-category.edit');
+    Route::post('/sub-category/update/{id}', [SubCategoryController::class, 'update'])->name('sub-category.update');
+    Route::get('/sub-category/destroy/{id}', [SubCategoryController::class, 'destroy'])->name('sub-category.destroy');
 
-//    Route::get('/brand/create', [BrandController::class, 'create'])->name('brand.create');
-//    Route::get('/brand', [BrandController::class, 'index'])->name('brand.index');
 
     Route::get('/unit/index', [UnitController::class, 'index'])->name('unit.index');
     Route::get('/unit/create', [UnitController::class, 'create'])->name('unit.create');

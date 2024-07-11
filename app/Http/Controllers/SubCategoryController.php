@@ -27,4 +27,23 @@ class SubCategoryController extends Controller
         SubCategory::newSubCategory($request);
         return back()->with('message', 'Create Sub Category Successfully');
     }
+
+    public function edit($id){
+        return view('admin.sub-category.edit',[
+            'sub_category'=>SubCategory::find($id),
+            'categories'=>Category::where('status',1)->get()
+        ]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        SubCategory::updateSubCategory($request, $id);
+        return redirect('/sub-category')->with('message', 'Sub Category Info updated successfully');
+    }
+
+    public function destroy($id)
+    {
+        SubCategory::deleteSubCategory($id);
+        return back()->with('message', 'Sub Category info delete successfully');
+    }
 }

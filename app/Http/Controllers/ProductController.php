@@ -28,12 +28,21 @@ class ProductController extends Controller
         ]);
     }
 
+    public function getSubCategoryByCategory(){
+
+        return response()->json(SubCategory::where('category_id', $_GET['id'])->get());
+    }
+
     public function store(Request $request)
     {
         $this->product=Product::newProduct($request);
         ProductImage::newProductImage($request->file('other_image'), $this->product->id);
         return back()->with('message', 'product info save succcessfullly');
 //        return $request;
+    }
+    public function detail($id)
+    {
+        return view('admin.product.detail',['product'=>Product::find($id)]);
     }
 
     public function edit()
@@ -43,7 +52,11 @@ class ProductController extends Controller
 
     public function update(Request $request, $id)
     {
-        return $request;
+//        return $request;
+
+        Product::updateProduct($request,$id);
+        if ($request->file())
+        ProductImage::updateProductImage($request->file(other_images));
     }
 
     public function destroy($id)

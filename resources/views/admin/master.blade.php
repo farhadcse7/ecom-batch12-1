@@ -1145,9 +1145,29 @@
 
 <!-- SWITCHER JS -->
 <script src="{{asset('/')}}admin/assets/switcher/js/switcher.js"></script>
+<script>
+    function getSubCategoryByCategory(categoryId) {
+        // alert(categoryId);
+        $.ajax({
+           type: "GET",
+           url:"{{url('/get-sub-category-by-category')}}",
+           data:{id:categoryId},
+           DataType:"JSON",
+           success:function (response) {
+               // console.log(response);
+               var option='';
+               option +='<option value="">-- Select Sub Category Name --</option>';
+               $.each(response, function (key, value){
+                   option += '<option value="'+value.id+'">'+value.name+'</option>';
+               });
+               $('#subCategory').empty();
+               $('#subCategory').append(option);
+           }
+        });
+    }
+</script>
 
 </body>
 
 
-<!-- Mirrored from laravel8.spruko.com/noa/index by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 May 2023 13:08:40 GMT -->
 </html>

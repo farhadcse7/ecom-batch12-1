@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class ProductImage extends Model
 {
     use HasFactory;
-    private static $productImage, $image, $directory, $imageName, $imageUrl;
+    private static $productImage, $image, $directory, $imageName, $imageUrl, $productImages;
 
     public static function newProductImage($images, $id){
         foreach ($images as $image)
@@ -23,6 +23,20 @@ class ProductImage extends Model
             self::$productImage->image = self::$imageUrl;
             self::$productImage->save();
         }
+
+    }
+
+    public static function updateProductImage($images, $id)
+    {
+        self::$productImages= ProductImage::where('product_id', $id)->get();
+        foreach (self::$productImages as $productImage)
+        {
+            if (file_exists($productImage->image)){
+                unlink($productImage->image);
+            }
+            $productImage->delete();
+        }
+        self::newProductImage($images, $id);
 
     }
 }

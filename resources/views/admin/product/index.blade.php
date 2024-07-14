@@ -35,7 +35,7 @@
                                 <th class="wd-20p border-bottom-0">Description</th>
                                 <th class="wd-20p border-bottom-0">Regular Price</th>
                                 <th class="wd-20p border-bottom-0">Selling Price</th>
-                                <th class="wd-20p border-bottom-0">Stock Amount</th>
+{{--                                <th class="wd-20p border-bottom-0">Stock Amount</th>--}}
                                 <th class="wd-15p border-bottom-0">Image</th>
                                 <th class="wd-10p border-bottom-0">Status</th>
                                 <th class="wd-25p border-bottom-0">Action</th>
@@ -51,10 +51,13 @@
                                     <td>{{$product->short_description}}</td>
                                     <td>{{$product->regular_price}}</td>
                                     <td>{{$product->selling_price}}</td>
-                                    <td>{{$product->stock_amount}}</td>
+{{--                                    <td>{{$product->stock_amount}}</td>--}}
                                     <td><img src="{{asset($product->image)}}" alt="" height="50"> </td>
                                     <td>{{$product->status == 1 ? 'Published':'Unpublished'}}</td>
                                     <td>
+                                        <a href="{{route('product.detail',['id'=>$product->id])}}" class="btn btn-info btn-sm">
+                                            <i class="fa fa-book"></i>
+                                        </a>
                                         <a href="{{route('product.edit',['id'=>$product->id])}}" class="btn btn-success btn-sm">
                                             <i class="fa fa-edit"></i>
                                         </a>

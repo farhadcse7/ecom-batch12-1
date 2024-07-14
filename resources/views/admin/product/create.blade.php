@@ -112,7 +112,7 @@
                         <div class="row mb-4">
                             <label for="image" class="col-md-3 form-label">Stock Amount</label>
                             <div class="col-md-9">
-                                <input class="form-control" name="stock_amount" id="image" type="number"/>
+                                <input class="form-control" name="stock_amount" placeholder="Stock Amount" id="image" type="number"/>
                             </div>
                         </div>
                         <div class="row mb-4">

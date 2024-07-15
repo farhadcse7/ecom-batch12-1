@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 14, 2024 at 04:49 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: Jul 15, 2024 at 10:21 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -66,8 +66,8 @@ CREATE TABLE `cache` (
 --
 
 INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
-('e10fd735ad88f21f45ee9e47870c152d', 'i:1;', 1720959605),
-('e10fd735ad88f21f45ee9e47870c152d:timer', 'i:1720959605;', 1720959605);
+('e10fd735ad88f21f45ee9e47870c152d', 'i:1;', 1721063229),
+('e10fd735ad88f21f45ee9e47870c152d:timer', 'i:1721063229;', 1721063229);
 
 -- --------------------------------------------------------
 
@@ -259,7 +259,7 @@ INSERT INTO `products` (`id`, `category_id`, `sub_category_id`, `brand_id`, `uni
 (7, 17, 13, 10, 6, 'Broiler Chicken', 'B45847', 'Broiler chickens are raised', '<p><span style=\"color: rgb(51, 51, 51); font-family: &quot;segoe ui&quot;, Helvetica, &quot;droid sans&quot;, Arial, &quot;lucida grande&quot;, tahoma, verdana, arial, sans-serif; font-size: 14px;\">Broiler chickens are raised primarily for meat rather than to lay eggs. These poultry are often white and are bred to be large</span><br></p>', 300, 250, 50, 'Broiler chickens', 'Broiler chickens are raised', 'uploads/product-images/broiler-chicken-skin-off-50-gm-1-kg.webp', 0, 0, 1, '2024-07-14 04:28:09', '2024-07-14 04:28:09'),
 (8, 18, 14, 11, 7, 'Grey Printed Cotton T-Shirt', 'T4545', 'Grey Printed Cotton T-Shirt', '<div class=\"page-title-wrapper product\" style=\"margin: 0px; padding: 0px;\"><h1 class=\"page-title\" style=\"margin-bottom: 15px; padding: 0px; font-size: 3rem;\"><span class=\"base\" data-ui-id=\"page-title-wrapper\" itemprop=\"name\" style=\"margin: 0px; padding: 0px;\">Grey Printed Cotton T-Shirt</span></h1><div><span class=\"base\" data-ui-id=\"page-title-wrapper\" itemprop=\"name\" style=\"margin: 0px; padding: 0px;\"><br></span></div></div><div class=\"product-info-price\" style=\"margin: 0px; padding: 0px; color: rgb(87, 87, 87); border: 0px; display: table; width: 476px; max-width: 100%;\"><div class=\"price-box price-final_price\" data-role=\"priceBox\" data-product-id=\"2620639\" data-price-box=\"product-id-2620639\" style=\"margin: 0px; padding: 0px 0px 10px; display: inline-block; vertical-align: top; width: auto;\"><span class=\"normal-price\" style=\"margin: 0px; padding: 0px; display: inline-block;\"><span class=\"price-container price-final_price tax weee\" itemprop=\"offers\" itemscope=\"\" itemtype=\"http://schema.org/Offer\" style=\"margin: 0px; padding: 0px; font-size: 21px;\"><span style=\"font-family: futura-pt, sans-serif;\"></span></span></span></div></div>', 1000, 800, 30, 'Grey Printed Cotton T-Shirt', 'Grey Printed Cotton T-Shirt', 'uploads/product-images/0120000035167.webp', 0, 0, 1, '2024-07-14 04:40:49', '2024-07-14 04:40:49'),
 (9, 18, 15, 11, 8, 'Pastel Green Embroidered', 'P4879', 'Pastel Green Embroidered', '<div class=\"page-title-wrapper product\" style=\"margin: 0px; padding: 0px;\"><h1 class=\"page-title\" style=\"margin-bottom: 15px; padding: 0px; font-size: 3rem;\"><span class=\"base\" data-ui-id=\"page-title-wrapper\" itemprop=\"name\" style=\"margin: 0px; padding: 0px;\">Pastel Green Embroidered Viscose-Cotton Panjabi</span></h1><div><span class=\"base\" data-ui-id=\"page-title-wrapper\" itemprop=\"name\" style=\"margin: 0px; padding: 0px;\"><br></span></div></div><div class=\"product-info-price\" style=\"margin: 0px; padding: 0px; color: rgb(87, 87, 87); border: 0px; display: table; width: 476px; max-width: 100%;\"><div class=\"price-box price-final_price\" data-role=\"priceBox\" data-product-id=\"2506331\" data-price-box=\"product-id-2506331\" style=\"margin: 0px; padding: 0px 0px 10px; display: inline-block; vertical-align: top; width: auto;\"><span class=\"normal-price\" style=\"margin: 0px; padding: 0px; display: inline-block;\"><span class=\"price-container price-final_price tax weee\" itemprop=\"offers\" itemscope=\"\" itemtype=\"http://schema.org/Offer\" style=\"margin: 0px; padding: 0px; font-size: 21px;\"><span style=\"font-family: futura-pt, sans-serif;\"></span></span></span></div></div>', 2000, 1500, 25, 'Pastel Green Embroidered Viscose-Cotton Panjabi', 'Pastel Green Embroidered Viscose-Cotton Panjabi', 'uploads/product-images/0030000130572.webp', 0, 0, 1, '2024-07-14 04:44:36', '2024-07-14 04:44:36'),
-(10, 16, 10, 8, 8, 'dell laptop 4847', 'D4858', 'df', '<p>adfdsf</p>', 20000, 18000, 10, 'ssso', 'meee', 'uploads/product-images/katan saree.jpeg', 0, 0, 1, '2024-07-14 07:22:07', '2024-07-14 07:22:07');
+(13, 18, 14, 11, 8, 'Maverick Men\'s T-Shirt', 'T8971', 'Maverick Men\'s T-Shirt short', '<h3 class=\"page-heading font-medium transition-all max-sm:text-3xl mb-2 leading-tight\" style=\"border: 0px solid rgb(229, 231, 235); --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgba(59,130,246,.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; outline: none; scrollbar-color: rgb(211, 211, 211) rgb(241, 241, 241); scrollbar-width: thin; font-size: 2rem; margin-right: 0px; margin-left: 0px; transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 0.5s; color: rgb(0, 0, 0); font-family: __Figtree_d7e390, __Figtree_Fallback_d7e390, &quot;Segoe UI&quot;, sans-serif;\">Maverick Men\'s T-Shirt long</h3>', 2000, 1500, 52, 'sm', 'lm', 'uploads/product-images/8d264cc6-81fb-45cf-aeba-23daec81090a.jpg', 0, 0, 1, '2024-07-15 14:12:48', '2024-07-15 14:13:24');
 
 -- --------------------------------------------------------
 
@@ -296,8 +296,8 @@ INSERT INTO `product_images` (`id`, `product_id`, `image`, `created_at`, `update
 (21, 8, 'uploads/product-other-images/0120000034112.webp', '2024-07-14 04:40:49', '2024-07-14 04:40:49'),
 (22, 9, 'uploads/product-other-images/0030000133112.webp', '2024-07-14 04:44:36', '2024-07-14 04:44:36'),
 (23, 9, 'uploads/product-other-images/0030000130572.webp', '2024-07-14 04:44:36', '2024-07-14 04:44:36'),
-(24, 10, 'uploads/product-other-images/Rain12.jpeg', '2024-07-14 07:22:07', '2024-07-14 07:22:07'),
-(25, 10, 'uploads/product-other-images/Rain.jpeg', '2024-07-14 07:22:07', '2024-07-14 07:22:07');
+(35, 13, 'uploads/product-other-images/8982cd3e-2b2f-4c8f-9c87-d1439b0a1e65.jpg', '2024-07-15 14:13:14', '2024-07-15 14:13:14'),
+(36, 13, 'uploads/product-other-images/8d264cc6-81fb-45cf-aeba-23daec81090a.jpg', '2024-07-15 14:13:14', '2024-07-15 14:13:14');
 
 -- --------------------------------------------------------
 
@@ -319,8 +319,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('6jrO9eFYVhc8jjtHCl3OnbbgzMapZyw8uZT6Mh5p', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiZGhBZDg1cTJEU2swb2hZRmRxTDZzTGgwNXJNQ2d3Slc5TjFhVExiUiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzY6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9wcm9kdWN0L2VkaXQvNCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czoyMToicGFzc3dvcmRfaGFzaF9zYW5jdHVtIjtzOjYwOiIkMnkkMTIkbzlwY1hMcnAuUkQ3WWRwZHpGbjNqZWZ5dU5NeVlUeXQxTTRyOFpFSXYzL3RPbHh0RVpSTEsiO30=', 1720966595),
-('eaUtpvNcWHbIr2j8PtjbmSmM9oHFtRz9ZF1ofkGU', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiVmtXcXVid21BRHhKTGpPQm1LMjdjand6ckp6RmxydFdjc0toWHNVSCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzU6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9wcm9kdWN0L2luZGV4Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjIxOiJwYXNzd29yZF9oYXNoX3NhbmN0dW0iO3M6NjA6IiQyeSQxMiRvOXBjWExycC5SRDdZZHBkekZuM2plZnl1Tk15WVR5dDFNNHI4WkVJdjMvdE9seHRFWlJMSyI7fQ==', 1720954242);
+('YguHvZ9K2MPQYJQRRayZvBh1dV9PpR1se6m86cSQ', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoieTBmbmhHc29FSlRUNkVCZ3VMUGJuSGZ5Qm5xdU5Ud3JoV0RZY3pabiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzU6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9wcm9kdWN0L2luZGV4Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTtzOjIxOiJwYXNzd29yZF9oYXNoX3NhbmN0dW0iO3M6NjA6IiQyeSQxMiRvOXBjWExycC5SRDdZZHBkekZuM2plZnl1Tk15WVR5dDFNNHI4WkVJdjMvdE9seHRFWlJMSyI7fQ==', 1721074842);
 
 -- --------------------------------------------------------
 
@@ -563,13 +562,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `product_images`
 --
 ALTER TABLE `product_images`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `sub_categories`

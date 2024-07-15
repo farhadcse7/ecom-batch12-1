@@ -8,7 +8,7 @@
         </div>
         <div class="ms-auto pageheader-btn">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="javascript:void(0);">Sub Category</a></li>
+                <li class="breadcrumb-item"><a href="javascript:void(0);">Product</a></li>
                 <li class="breadcrumb-item active" aria-current="page">Create Product</li>
             </ol>
         </div>

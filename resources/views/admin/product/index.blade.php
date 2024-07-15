@@ -32,8 +32,8 @@
                                 <th class="wd-15p border-bottom-0">Category Name</th>
                                 <th class="wd-15p border-bottom-0">Sub Category Name</th>
                                 <th class="wd-15p border-bottom-0">Product Name</th>
-                                <th class="wd-20p border-bottom-0">Description</th>
-                                <th class="wd-20p border-bottom-0">Regular Price</th>
+{{--                                <th class="wd-20p border-bottom-0">Description</th>--}}
+{{--                                <th class="wd-20p border-bottom-0">Regular Price</th>--}}
                                 <th class="wd-20p border-bottom-0">Selling Price</th>
 {{--                                <th class="wd-20p border-bottom-0">Stock Amount</th>--}}
                                 <th class="wd-15p border-bottom-0">Image</th>
@@ -48,8 +48,8 @@
                                     <td>{{$product->category->name}}</td>
                                     <td>{{$product->subCategory->name}}</td>
                                     <td>{{$product->name}}</td>
-                                    <td>{{$product->short_description}}</td>
-                                    <td>{{$product->regular_price}}</td>
+{{--                                    <td>{{$product->short_description}}</td>--}}
+{{--                                    <td>{{$product->regular_price}}</td>--}}
                                     <td>{{$product->selling_price}}</td>
 {{--                                    <td>{{$product->stock_amount}}</td>--}}
                                     <td><img src="{{asset($product->image)}}" alt="" height="50"> </td>

@@ -73,6 +73,7 @@ class Product extends Model
     public static function deleteProduct($id)
     {
         self::$product=Product::find($id);
+        unlink(self::$product->image);
         self::$product->delete();
     }
 
